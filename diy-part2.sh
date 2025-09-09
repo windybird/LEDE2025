@@ -41,6 +41,7 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 rm -rf feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/lean/luci-app-msd_lite
+sed -i 's/msgstr \"MultiSD_Lite\"/msgstr \"组播转换\"/g' package/lean/luci-app-msd_lite/po/zh-cn/msd_lite.po
 sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
 
 # 添加openclash
