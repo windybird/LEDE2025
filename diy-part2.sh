@@ -21,10 +21,10 @@ sed -i 's/root:::0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:999
 
 # Import external feeds - JerryKuKu Argon
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon/root/etc/uci-defaults/30_luci-theme-argon
-sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-argon-mod/root/etc/uci-defaults/90_luci-theme-argon
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-material/root/etc/uci-defaults/30_luci-theme-material
-sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-netgear/root/etc/uci-defaults/30_luci-theme-netgear
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-openwrt/root/etc/uci-defaults/30_luci-theme-openwrt
+sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-openwrt-2020/root/etc/uci-defaults/30_luci-theme-openwrt-2020
 sed -i 's/Bootstrap/Design/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci/Makefile
 
