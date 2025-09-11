@@ -1,4 +1,4 @@
-#!/bin/bash
+  #!/bin/bash
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
@@ -36,19 +36,6 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
 #修改iptv
 #sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
-
-# 添加openclash
-mkdir package/openclash
-cd package/openclash
-git init
-git remote add origin https://github.com/vernesong/OpenClash.git
-git config core.sparsecheckout true
-echo "luci-app-openclash" >> .git/info/sparse-checkout
-git pull --depth 1 origin master
-git branch --set-upstream-to=origin/master master
-mv luci-app-openclash ../
-cd ../../
-rm -rf package/openclash
 
 # 修改frp版本
 # sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.61.1' feeds/packages/net/frp/Makefile
