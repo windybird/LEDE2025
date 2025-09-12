@@ -25,6 +25,8 @@ sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-bootstrap/r
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-material/root/etc/uci-defaults/30_luci-theme-material
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-openwrt/root/etc/uci-defaults/30_luci-theme-openwrt
 sed -i '/luci.main.mediaurlbase/s/^/#/' feeds/luci/themes/luci-theme-openwrt-2020/root/etc/uci-defaults/30_luci-theme-openwrt-2020
+sed -i 's/Bootstrap Theme (default)/Bootstrap Theme/g' feeds/luci/themes/luci-theme-bootstrap/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-design/g' feeds/luci/collections/luci-light/Makefile
 
 # 更改IP后TTYD不能访问以及外网访问
 #sed -i '/${interface:+-i $interface}/s/^/#/' feeds/packages/utils/ttyd/files/ttyd.init               //此屏蔽与IPV6有冲突
