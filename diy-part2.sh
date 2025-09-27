@@ -44,7 +44,7 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 rm -rf feeds/packages/lang/golang
 mv files/golang feeds/packages/lang/
 rm -rf feeds/packages/net/frp
-mv files/frp/frp feeds/packages/net/
+mv files/frp/net/frp feeds/packages/net/
 rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/luci/applications/luci-app-frps
 mv files/frp/luci-app-frpc feeds/luci/applications/
