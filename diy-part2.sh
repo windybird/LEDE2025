@@ -41,15 +41,9 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 #sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
 
 # 修改frp版本
-#git clone https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
-rm -rf feeds/packages/lang/golang
-mv files/golang feeds/packages/lang/
 rm -rf feeds/packages/net/frp
 mv files/frp/net/frp feeds/packages/net/
 rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/luci/applications/luci-app-frps
 mv files/frp/luci-app-frpc feeds/luci/applications/
-mv files/frp/luci-app-frps feeds/luci/applications/
-#chmod -R 755 feeds/luci/applications/luci-app-frpc/
-#sed -i '/PKG_VERSION:=/c\PKG_VERSION:=0.61.2' feeds/packages/net/frp/Makefile   
-#sed -i '/PKG_HASH:=/c\PKG_HASH:=19600d944e05f7ed95bac53c18cbae6ce7eff859c62b434b0c315ca72acb1d3c' feeds/packages/net/frp/Makefile 
+mv files/frp/luci-app-frps feeds/luci/applications/ 
