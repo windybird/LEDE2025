@@ -47,3 +47,7 @@ rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/luci/applications/luci-app-frps
 mv files/frp/luci-app-frpc feeds/luci/applications/
 mv files/frp/luci-app-frps feeds/luci/applications/ 
+
+# 修改unblockneteasemusic
+rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
+git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git feeds/luci/applications/luci-app-unblockneteasemusic
