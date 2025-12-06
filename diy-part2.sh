@@ -53,6 +53,8 @@ rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
 rm -rf feeds/packages/multimedia/UnblockNeteaseMusic
 git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
 sed -i 's/+node//g' package/luci-app-unblockneteasemusic/Makefile
+sed -i 's/5200/31212/g' package/luci-app-unblockneteasemusic/root/etc/init.d/unblockneteasemusic
+sed -i 's/5201/31213/g' package/luci-app-unblockneteasemusic/root/etc/init.d/unblockneteasemusic
 # 打包核心
 NAME=$"package/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
 echo "$(uclient-fetch -qO- 'https://api.github.com/repos/UnblockNeteaseMusic/server/commits?sha=enhanced&path=precompiled' | jsonfilter -e '@[0].sha')">"$NAME/core_local_ver"
