@@ -55,6 +55,7 @@ git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.gi
 sed -i 's/+node//g' package/luci-app-unblockneteasemusic/Makefile
 #sed -i 's/5200/31212/g' package/luci-app-unblockneteasemusic/root/etc/init.d/unblockneteasemusic
 #sed -i 's/5201/31213/g' package/luci-app-unblockneteasemusic/root/etc/init.d/unblockneteasemusic
+
 # 打包核心
 NAME=$"package/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
 echo "$(uclient-fetch -qO- 'https://api.github.com/repos/UnblockNeteaseMusic/server/commits?sha=enhanced&path=precompiled' | jsonfilter -e '@[0].sha')">"$NAME/core_local_ver"
@@ -63,3 +64,6 @@ curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/precompiled/b
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/ca.crt -o $NAME/core/ca.crt
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.crt -o $NAME/core/server.crt
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.key -o $NAME/core/server.key
+
+# lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
