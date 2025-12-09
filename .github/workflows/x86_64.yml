@@ -104,12 +104,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
-    - name: 开启 SSH 调试会话
-      uses: mxschmitt/action-tmate@v3
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      timeout-minutes: 30
-
+        
     - name: Compile the firmware
       id: compile
       run: |
