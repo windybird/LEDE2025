@@ -49,7 +49,7 @@ mv files/frp/luci-app-frpc feeds/luci/applications/
 mv files/frp/luci-app-frps feeds/luci/applications/ 
 
 # 修改unblockneteasemusic
-rm -rf feeds/luci/applications/luci-app-unblockmusic
+rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
 rm -rf feeds/packages/multimedia/UnblockNeteaseMusic
 rm -rf feeds/packages/multimedia/UnblockNeteaseMusic-Go
 
