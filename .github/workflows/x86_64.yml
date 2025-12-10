@@ -105,12 +105,6 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         
-    - name: 开启网页 SSH（tmate）
-      uses: mxschmitt/action-tmate@v3
-      with:
-        limit-access-to-actor: true
-        timeout-minutes: 15    
-        
     - name: Compile the firmware
       id: compile
       run: |
