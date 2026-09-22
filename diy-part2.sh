@@ -41,12 +41,12 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 #sed -i 's/${vendorid:+-V "$vendorid"}/${vendorid:+-V "" "-x 0x3c:$vendorid"}/g' package/network/config/netifd/files/lib/netifd/proto/dhcp.sh
 
 # 修改frp版本
-rm -rf feeds/packages/net/frp
-mv files/frp/net/frp feeds/packages/net/
-rm -rf feeds/luci/applications/luci-app-frpc
-rm -rf feeds/luci/applications/luci-app-frps
-mv files/frp/luci-app-frpc feeds/luci/applications/
-mv files/frp/luci-app-frps feeds/luci/applications/ 
+#rm -rf feeds/packages/net/frp
+#mv files/frp/net/frp feeds/packages/net/
+#rm -rf feeds/luci/applications/luci-app-frpc
+#rm -rf feeds/luci/applications/luci-app-frps
+#mv files/frp/luci-app-frpc feeds/luci/applications/
+#mv files/frp/luci-app-frps feeds/luci/applications/ 
 
 # 修改unblockneteasemusic
 rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
