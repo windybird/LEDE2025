@@ -49,15 +49,15 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 #mv files/frp/luci-app-frps feeds/luci/applications/ 
 
 # 修改unblockneteasemusic
-rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
-rm -rf feeds/packages/multimedia/UnblockNeteaseMusic
-rm -rf feeds/packages/multimedia/UnblockNeteaseMusic-Go
+#rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
+#rm -rf feeds/packages/multimedia/UnblockNeteaseMusic
+#rm -rf feeds/packages/multimedia/UnblockNeteaseMusic-Go
 
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
-sed -i 's/+node//g' package/luci-app-unblockneteasemusic/Makefile
+#git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/luci-app-unblockneteasemusic
+#sed -i 's/+node//g' package/luci-app-unblockneteasemusic/Makefile
 
 #打包unblockneteasemusic的core核心
-NAME=$"package/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
+NAME=$"feeds/luci/applications/luci-app-unblockneteasemusic/root/usr/share/unblockneteasemusic" && mkdir -p $NAME/core
 echo "$(curl -s 'https://api.github.com/repos/UnblockNeteaseMusic/server/commits?sha=enhanced&path=precompiled' | jq -r '.[0].sha')" > "$NAME/core_local_ver"
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/precompiled/app.js -o $NAME/core/app.js
 curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/precompiled/bridge.js -o $NAME/core/bridge.js
