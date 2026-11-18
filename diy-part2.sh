@@ -73,3 +73,5 @@ mv files/unm/server.key $NAME/core/server.key
 rm -rf feeds/luci/applications/luci-app-lucky
 rm -rf feeds/packages/net/lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+
+rm -rf files/diy
