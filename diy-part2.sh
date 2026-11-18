@@ -43,10 +43,10 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 # 修改frp版本
 #rm -rf feeds/packages/net/frp
 #mv files/frp/net/frp feeds/packages/net/
-#rm -rf feeds/luci/applications/luci-app-frpc
-#rm -rf feeds/luci/applications/luci-app-frps
-#mv files/frp/luci-app-frpc feeds/luci/applications/
-#mv files/frp/luci-app-frps feeds/luci/applications/ 
+rm -rf feeds/luci/applications/luci-app-frpc
+rm -rf feeds/luci/applications/luci-app-frps
+mv files/diy/frp/luci-app-frpc feeds/luci/applications/
+mv files/diy/frp/luci-app-frps feeds/luci/applications/ 
 
 # 修改unblockneteasemusic
 #rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
