@@ -46,7 +46,8 @@ sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/luci/applications/luci-app-frps
 mv files/diy/frp/luci-app-frpc feeds/luci/applications/
-mv files/diy/frp/luci-app-frps feeds/luci/applications/ 
+mv files/diy/frp/luci-app-frps feeds/luci/applications/
+sed -i 's/node\/host//g' feeds/packages/net/frp/Makefile
 
 # 修改unblockneteasemusic
 #rm -rf feeds/luci/applications/luci-app-unblockneteasemusic
